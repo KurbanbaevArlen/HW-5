@@ -30,9 +30,9 @@ select MAX(price) AS max_price,MIN(price)as min_price  FROM cars; --13
 
 select * from cars where brand not in('Toyota'); --14
 
-select   MAX(price) as max_prices from cars HAVING count(brand) > 10;   --15??? бутуро албадым
+select * from cars order by price desc limit 10; --15
 
-select  * from cars where year_of_issue =  2010 and id = 5 or id = 15;  --16??? бутуро албадым
+select  * from cars order by year_of_issue desc offset 5 rows fetch next 15 rows only; --16
 
 select * from cars where year_of_issue not between '1995' and '2005' order by year_of_issue;  --17
 
