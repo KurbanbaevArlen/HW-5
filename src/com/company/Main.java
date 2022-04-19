@@ -30,9 +30,9 @@ select * from products where price >= 46000;
 
 select * from products where price > 56000;
 
-select product_name from products where price < 25000;
+select product_name from products ordey by price desc limit 2;
 
-SELECT MIN(price) as min_price FROM products WHERE company like '%';
+SELECT product-name from products ordey by price limit 1;
 
 select * from products where not isDiscounted;
 
